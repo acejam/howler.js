@@ -360,6 +360,7 @@
 
       // Setup user-defined default properties.
       self._autoplay = o.autoplay || false;
+      self._crossOrigin = o.crossOrigin || false;
       self._format = o.format || null;
       self._html5 = o.html5 || false;
       self._muted = o.mute || false;
@@ -1649,6 +1650,7 @@
         // Setup the new audio node.
         self._node.src = parent._src;
         self._node.preload = 'auto';
+        self._node.crossOrigin = '';
         self._node.volume = volume;
 
         // Begin loading the source.
